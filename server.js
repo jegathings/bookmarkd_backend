@@ -7,6 +7,7 @@ const PORT = process.env.PORT;
 const WHITELIST=process.env.WHITELIST.split(" ");
 const MONGODB_URI = process.env.MONGODB_URI;//Check that MONGODB_URI is correct for heroku
 
+console.log("Whitelist", WHITELIST);
 const corsOptions = {
     origin: process.env.cor,
     origin: function (origin, callback) {
