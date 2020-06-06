@@ -4,13 +4,10 @@ require('dotenv').config();
 const mongoose = require('mongoose');
 const cors = require('cors');
 const PORT = process.env.PORT;
-const WHITELIST = process.env.whitelist.split(" ");
 const Bookmarkd = require('./models/bookmarkd.js');
 const User = require('./models/users.js');
 const MONGODB_URI = process.env.MONGODB_URI;//Check that MONGODB_URI is correct for heroku
 
-///// whitelist is the list of url our api accepts calls from
-console.log("Whitelist", WHITELIST);
 const corsOptions = {
     origin: process.env.cor
 }
