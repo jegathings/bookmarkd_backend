@@ -4,12 +4,18 @@ require('dotenv').config();
 const mongoose = require('mongoose');
 const cors = require('cors');
 const PORT = process.env.PORT;
-const Bookmarkd = require('./models/bookmarkd.js');
-const User = require('./models/users.js');
+const WHITELIST=process.env.WHITELIST.split(" ");
 const MONGODB_URI = process.env.MONGODB_URI;//Check that MONGODB_URI is correct for heroku
 
 const corsOptions = {
-    origin: process.env.cor
+    origin: process.env.cor,
+    origin: function (origin, callback) {
+        if(whitelist.indexOf(origin) !== -1) {
+            callback(null, true);
+        } else {
+            callback(new Error('Not allowed by CORS'));
+        }
+    }
 }
 app.use(cors(corsOptions));
 
