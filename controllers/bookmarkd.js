@@ -8,7 +8,7 @@ router.get('/seed', (req, res) => {
         if(err){
             console.log(err);
         }else{
-            res.redirect('/bookmarks');
+            res.redirect('/index');
         }
     })
 });
