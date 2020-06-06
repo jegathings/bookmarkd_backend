@@ -10,7 +10,7 @@ const MONGODB_URI = process.env.MONGODB_URI;//Check that MONGODB_URI is correct 
 const corsOptions = {
     origin: process.env.cor,
     origin: function (origin, callback) {
-        if(whitelist.indexOf(origin) !== -1) {
+        if(WHITELIST.indexOf(origin) !== -1) {
             callback(null, true);
         } else {
             callback(new Error('Not allowed by CORS'));
