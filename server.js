@@ -11,6 +11,7 @@ console.log("Whitelist", WHITELIST);
 const corsOptions = {
     origin: process.env.cor,
     origin: function (origin, callback) {
+        console.log("Origin", origin);
         if(WHITELIST.indexOf(origin) !== -1) {
             callback(null, true);
         } else {
