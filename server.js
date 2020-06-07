@@ -11,7 +11,7 @@ console.log("Whitelist", WHITELIST);
 const corsOptions = {
     origin: process.env.cor
 }
-app.use(cors(corsOptions));
+app.use(cors());
 
 ////// Globals
 const bookmarkdController = require('./controllers/bookmarkd.js');
