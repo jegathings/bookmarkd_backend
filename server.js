@@ -4,7 +4,7 @@ require('dotenv').config();
 const mongoose = require('mongoose');
 const cors = require('cors');
 const PORT = process.env.PORT;
-const WHITELIST=process.env.WHITELIST.split(" ");
+const WHITELIST=process.env.WHITELIST
 const MONGODB_URI = process.env.MONGODB_URI;//Check that MONGODB_URI is correct for heroku
 
 console.log("Whitelist", WHITELIST);
