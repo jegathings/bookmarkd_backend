@@ -47,7 +47,6 @@ router.delete('/delete/:id', async (req, res) =>{
     }
 })
 
-
 router.put('/update/:id', async (req, res) =>{
     try{
         const updatedBookmark = await Bookmark.findByIdAndUpdate(req.params.id, req.body)
@@ -56,8 +55,5 @@ router.put('/update/:id', async (req, res) =>{
         res.status(400).json(error)
     }
 })
-
-
-
 
 module.exports = router;
